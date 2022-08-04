@@ -8,7 +8,7 @@ Library         RPA.Excel.Application
 
 Add New WorkSheet Into WorkBook
     [Arguments]     ${EXCEL_FILE}      ${SHEET_NAME}
-    Open Application
+    Open Application    True
     Open Workbook    ${EXCEL_FILE}
     Add New Sheet    ${SHEET_NAME}  create_workbook=False
     Save Excel
@@ -17,7 +17,7 @@ Add New WorkSheet Into WorkBook
     
 Activate WorkSheet For WorkBook
     [Arguments]     ${EXCEL_FILE}      ${SHEET_NAME}    ${FLAG}=True
-    Open Application
+    Open Application    True
     Open Workbook    ${EXCEL_FILE}
     Run Keyword If  ${FLAG}==True       Add New Sheet    ${SHEET_NAME}  create_workbook=False
     Set Active Worksheet       sheetname=${SHEET_NAME}
@@ -25,7 +25,7 @@ Activate WorkSheet For WorkBook
 Enter Data Into Cell
     [Arguments]     ${DATA}   ${ROW}   ${COL}
     Write To Cells    row=${ROW}   column=${COL}  value=${DATA}
-    sleep   2
+    sleep   5
     
 Save And Exit WorkSheet
     Save Excel
