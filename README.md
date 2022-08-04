@@ -11,3 +11,13 @@ This template robot:
 ## Learning materials
 
 - [All docs related to Robot Framework](https://robocorp.com/docs/languages-and-frameworks/robot-framework)
+
+- Ejercicio del curso "RPA Developer Course Robocorp"
+Uso de la librería RPA.Excel.Application
+
+*** Keywords ***
+Add New WorkSheet Into WorkBook
+Activate WorkSheet For WorkBook
+Enter Data Into Cell
+Save And Exit WorkSheet
+Get Data From Cell
